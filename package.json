@@ -1,0 +1,66 @@
+{
+  "name": "dropbox-ignore-anywhere",
+  "version": "0.0.0-semantically-released",
+  "description": "A tool for help you to ignore files and folders in Dropbox.",
+  "main": "index.js",
+  "author": "Rıdvan Altun",
+  "license": "MIT",
+  "scripts": {
+    "commit": "git-cz",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "semantic-release": "semantic-release",
+    "travis-deploy-once": "travis-deploy-once"
+  },
+  "bin": {
+    "di": "./bin/di.js",
+    "dropbox-ignore-anywhere": "./bin/di.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ridvanaltun/dropbox-ignore-anywhere.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ridvanaltun/dropbox-ignore-anywhere/issues"
+  },
+  "keywords": [
+    "dropbox",
+    "ignore"
+  ],
+  "dependencies": {
+    "chalk": "^4.1.0",
+    "commander": "^5.1.0",
+    "node-powershell": "^4.0.0",
+    "update-notifier": "^4.1.0"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^8.3.5",
+    "@commitlint/config-conventional": "^8.3.4",
+    "@semantic-release/changelog": "^5.0.1",
+    "@semantic-release/git": "^9.0.0",
+    "commitizen": "^4.1.2",
+    "cz-conventional-changelog": "^3.2.0",
+    "eslint": "^7.2.0",
+    "eslint-config-google": "^0.14.0",
+    "husky": "^4.2.5",
+    "lint-staged": "^10.2.10",
+    "semantic-release": "^17.0.8"
+  },
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.js": [
+      "./node_modules/.bin/eslint — fix --no-error-on-unmatched-pattern",
+      "git add"
+    ]
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  }
+}
