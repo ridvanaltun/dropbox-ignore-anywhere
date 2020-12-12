@@ -1,5 +1,4 @@
 const Chalk = require('chalk');
-const {execShellCommand, execPowerShellCommand} = require('../lib');
 
 const revoke = async (paths) => {
   try {
@@ -9,6 +8,7 @@ const revoke = async (paths) => {
     const isLinux = !isWindows && !isMacOS;
 
     if (isWindows) {
+      const execPowerShellCommand = require('../lib/execPowerShellCommand');
       const cmd =
         'Clear-Content -Path ' + paths + ' -Stream com.dropbox.ignored';
       const response = await execPowerShellCommand(cmd);
@@ -16,11 +16,13 @@ const revoke = async (paths) => {
     }
 
     if (isMacOS) {
+      const execShellCommand = require('../lib/execShellCommand');
       const cmd = `xattr -d com.dropbox.ignored ${paths.replace(' ', '\\ ')}`;
       return await execShellCommand(cmd);
     }
 
     if (isLinux) {
+      const execShellCommand = require('../lib/execPowerShellCommand');
       const cmd = `attr -r com.dropbox.ignored ${paths}`;
       return await execShellCommand(cmd);
     }
