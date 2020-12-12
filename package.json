@@ -9,8 +9,7 @@
     "commit": "git-cz",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
-    "semantic-release": "semantic-release",
-    "travis-deploy-once": "travis-deploy-once"
+    "semantic-release": "semantic-release"
   },
   "bin": {
     "di": "./bin/di.js",
@@ -29,22 +28,22 @@
   ],
   "dependencies": {
     "chalk": "^4.1.0",
-    "commander": "^5.1.0",
+    "commander": "^6.2.0",
     "node-powershell": "^4.0.0",
-    "update-notifier": "^4.1.0"
+    "update-notifier": "^5.0.1"
   },
   "devDependencies": {
-    "@commitlint/cli": "^8.3.5",
-    "@commitlint/config-conventional": "^8.3.4",
+    "@commitlint/cli": "^11.0.0",
+    "@commitlint/config-conventional": "^11.0.0",
     "@semantic-release/changelog": "^5.0.1",
     "@semantic-release/git": "^9.0.0",
-    "commitizen": "^4.1.2",
-    "cz-conventional-changelog": "^3.2.0",
-    "eslint": "^7.2.0",
+    "commitizen": "^4.2.2",
+    "cz-conventional-changelog": "^3.3.0",
+    "eslint": "^7.15.0",
     "eslint-config-google": "^0.14.0",
-    "husky": "^4.2.5",
-    "lint-staged": "^10.2.10",
-    "semantic-release": "^17.0.8"
+    "husky": "^4.3.5",
+    "lint-staged": "^10.5.3",
+    "semantic-release": "^17.3.0"
   },
   "husky": {
     "hooks": {
