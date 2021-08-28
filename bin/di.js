@@ -7,13 +7,13 @@ const {ignore, revoke} = require('../commands');
 updateNotifier({pkg}).notify({isGlobal: true});
 Commander.version(pkg.version);
 
-Commander.command('ignore <paths>')
+Commander.command('ignore <path>')
     .description('Ignore file or folder')
     .action(async (paths) => {
       console.log(await ignore(paths));
     });
 
-Commander.command('revoke <paths>')
+Commander.command('revoke <path>')
     .description('Revoke ignore file or folder')
     .action(async (paths, options) => {
       console.log(await revoke(paths));
