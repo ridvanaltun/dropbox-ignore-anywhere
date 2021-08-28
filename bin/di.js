@@ -9,14 +9,14 @@ Commander.version(pkg.version);
 
 Commander.command('ignore <path>')
     .description('Ignore file or folder')
-    .action(async (paths) => {
-      console.log(await ignore(paths));
+    .action(async (path) => {
+      console.log(await ignore(path));
     });
 
 Commander.command('revoke <path>')
     .description('Revoke ignore file or folder')
-    .action(async (paths, options) => {
-      console.log(await revoke(paths));
+    .action(async (path, options) => {
+      console.log(await revoke(path));
     });
 
 Commander.parse(process.argv);

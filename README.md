@@ -15,17 +15,17 @@ Only tested in Windows 10 and macOS. If you found a bug let me know.
 # learn how to use it
 npx dropbox-ignore-anywhere --help
 
-# ignore with a comma separated list
-npx dropbox-ignore-anywhere ignore <paths>
+# ignore file or folder
+npx dropbox-ignore-anywhere ignore <path>
 
-# revoke ignore with a comma separated list
-npx dropbox-ignore-anywhere revoke <paths>
+# revoke ignore file or folder
+npx dropbox-ignore-anywhere revoke <path>
 
 # install the cli to your system
 npm i dropbox-ignore-anywhere -g
 
 # use it
-di ignore <paths>
+di ignore <path>
 ```
 
 ## Development
