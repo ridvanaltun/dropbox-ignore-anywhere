@@ -1,6 +1,6 @@
 {
   "name": "dropbox-ignore-anywhere",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "A tool for help you to ignore files and folders in Dropbox.",
   "main": "index.js",
   "author": "Rıdvan Altun",

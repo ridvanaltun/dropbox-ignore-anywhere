@@ -1,3 +1,10 @@
+## [1.0.3](https://github.com/ridvanaltun/dropbox-ignore-anywhere/compare/v1.0.2...v1.0.3) (2021-08-28)
+
+
+### Bug Fixes
+
+* enforce to a new release ([e1b2787](https://github.com/ridvanaltun/dropbox-ignore-anywhere/commit/e1b2787e236e3c67a737ae5235691bc0c1d8cc2e))
+
 ## [1.0.2](https://github.com/ridvanaltun/dropbox-ignore-anywhere/compare/v1.0.1...v1.0.2) (2021-08-28)
 
 
