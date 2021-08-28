@@ -44,7 +44,7 @@ npm link
 npm run commit && git push
 
 # if no need for test or development, unlink it
-npm unlink
+npm unlink -g
 ```
 
 ## License
