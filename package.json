@@ -9,7 +9,9 @@
     "commit": "git-cz",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
-    "semantic-release": "semantic-release"
+    "semantic-release": "semantic-release",
+    "prepare": "husky install",
+    "pre-commit": "lint-staged"
   },
   "bin": {
     "di": "./bin/di.js",
@@ -27,29 +29,23 @@
     "ignore"
   ],
   "dependencies": {
-    "chalk": "^4.1.0",
-    "commander": "^6.2.0",
+    "chalk": "^4.1.2",
+    "commander": "^8.1.0",
     "node-powershell": "^4.0.0",
-    "update-notifier": "^5.0.1"
+    "update-notifier": "^5.1.0"
   },
   "devDependencies": {
-    "@commitlint/cli": "^11.0.0",
-    "@commitlint/config-conventional": "^11.0.0",
+    "@commitlint/cli": "^13.1.0",
+    "@commitlint/config-conventional": "^13.1.0",
     "@semantic-release/changelog": "^5.0.1",
     "@semantic-release/git": "^9.0.0",
-    "commitizen": "^4.2.2",
+    "commitizen": "^4.2.4",
     "cz-conventional-changelog": "^3.3.0",
-    "eslint": "^7.15.0",
+    "eslint": "^7.32.0",
     "eslint-config-google": "^0.14.0",
-    "husky": "^4.3.5",
-    "lint-staged": "^10.5.3",
-    "semantic-release": "^17.3.0"
-  },
-  "husky": {
-    "hooks": {
-      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
-      "pre-commit": "lint-staged"
-    }
+    "husky": "^7.0.0",
+    "lint-staged": "^11.1.2",
+    "semantic-release": "^17.4.7"
   },
   "lint-staged": {
     "*.js": [
