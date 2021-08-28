@@ -1,12 +1,10 @@
 const Chalk = require('chalk');
+const {computed} = require('../consts');
+
+const {isWindows, isMacOS, isLinux} = computed;
 
 const ignore = async (path) => {
   try {
-    const platform = process.platform;
-    const isWindows = platform === 'win32';
-    const isMacOS = platform === 'darwin';
-    const isLinux = !isWindows && !isMacOS;
-
     if (isWindows) {
       const execPowerShellCommand = require('../lib/execPowerShellCommand');
       const cmd =
