@@ -1,3 +1,10 @@
+## [1.0.2](https://github.com/ridvanaltun/dropbox-ignore-anywhere/compare/v1.0.1...v1.0.2) (2021-08-28)
+
+
+### Bug Fixes
+
+* only works for single paths, so rename argument ([890a5d8](https://github.com/ridvanaltun/dropbox-ignore-anywhere/commit/890a5d87204b5fc4c78591f1f373fb815af57d6f))
+
 ## [1.0.1](https://github.com/ridvanaltun/dropbox-ignore-anywhere/compare/v1.0.0...v1.0.1) (2020-12-12)
 
 
