@@ -7,7 +7,7 @@
 [![Build Status](https://travis-ci.com/ridvanaltun/dropbox-ignore-anywhere.svg?branch=master)](https://travis-ci.com/ridvanaltun/dropbox-ignore-anywhere)
 [![license](https://img.shields.io/npm/l/dropbox-ignore-anywhere.svg)](https://github.com/ridvanaltun/dropbox-ignore-anywhere/blob/master/LICENSE)
 
-Only tested in Windows 10 and macOS. If you found a bug let me know.
+Tested on Windows 10, macOS and Linux. If you found a bug let me know.
 
 ## Usage
 
