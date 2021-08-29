@@ -1,3 +1,4 @@
+<!-- omit in toc -->
 # Dropbox Ignore
 
 [![npm version](https://img.shields.io/npm/v/dropbox-ignore-anywhere.svg)](https://npmjs.com/package/dropbox-ignore-anywhere)
@@ -9,7 +10,15 @@
 
 Tested on Windows 10, macOS and Linux. If you found a bug let me know.
 
-## Usage
+<!-- omit in toc -->
+# Table of Contents
+
+- [Usage](#usage)
+- [Add Windows Context Menu](#add-windows-context-menu)
+- [Development](#development)
+- [License](#license)
+
+# Usage
 
 ```bash
 # learn how to use it
@@ -28,7 +37,17 @@ npm i dropbox-ignore-anywhere -g
 di ignore <path>
 ```
 
-## Development
+# Add Windows Context Menu
+
+Download `Add_Ignore_From_Dropbox_Context_Menu.reg` under [here](https://github.com/ridvanaltun/dropbox-ignore-anywhere/tree/master/regedit) and execute it.
+
+You can remove this with `Remove_Ignore_From_Dropbox_Context_Menu.reg` file.
+
+**Note:** Change the file if not fit your needs. For an example, Dropbox location may not same. Check before proceed.
+
+![Windows Context Menu](./docs/windows-context-menu.png)
+
+# Development
 
 ```bash
 # clone the project
@@ -47,6 +66,6 @@ npm run commit && git push
 npm unlink -g
 ```
 
-## License
+# License
 
 [MIT](https://github.com/ridvanaltun/dropbox-ignore-anywhere/blob/master/LICENSE)

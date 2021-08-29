@@ -1,0 +1,19 @@
+Windows Registry Editor Version 5.00
+
+;= Context menu to folders:
+[HKEY_CLASSES_ROOT\Directory\shell\Dropbox Ignore Anywhere]
+"AppliesTo"="System.ItemPathDisplay:\"Dropbox\""
+"Icon"="C:\\Program Files (x86)\\Dropbox\\Client\\Dropbox.exe,12"
+@="Ignore from Dropbox"
+
+[HKEY_CLASSES_ROOT\Directory\shell\Dropbox Ignore Anywhere\command]
+@="cmd.exe /s /k di ignore \"%1\""
+
+;= Context menu to files:
+[HKEY_CLASSES_ROOT\*\shell\Dropbox Ignore Anywhere]
+"AppliesTo"="System.ItemPathDisplay:\"Dropbox\""
+"Icon"="C:\\Program Files (x86)\\Dropbox\\Client\\Dropbox.exe,12"
+@="Ignore from Dropbox"
+
+[HKEY_CLASSES_ROOT\*\shell\Dropbox Ignore Anywhere\command]
+@="cmd.exe /s /k di ignore \"%1\""
