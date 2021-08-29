@@ -8,11 +8,11 @@ const revoke = async (path) => {
   try {
     if (isWindows) {
       const execPowerShellCommand = require('../lib/execPowerShellCommand');
-      const cmd =
-        'Clear-Content -Path ' + '"' + absPath(path) + '"' + ' -Stream com.dropbox.ignored';
+      const cmd = `Clear-Content -Path '${absPath(path)}' -Stream com.dropbox.ignored`;
       const response = await execPowerShellCommand(cmd);
       const isSuccessful = response === '';
-      return isSuccessful ? `${Chalk.green('Successful')}` : response;
+      const successMessage = `${Chalk.green(`Successfully revoked the ignored attribute "${path}"`)}`;
+      return isSuccessful ? successMessage : response;
     }
 
     if (isMacOS) {

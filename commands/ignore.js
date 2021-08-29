@@ -8,11 +8,11 @@ const ignore = async (path) => {
   try {
     if (isWindows) {
       const execPowerShellCommand = require('../lib/execPowerShellCommand');
-      const cmd =
-        'Set-Content -Path ' + '"' + absPath(path) + '"' + ' -Stream com.dropbox.ignored -Value 1';
+      const cmd = `Set-Content -Path '${absPath(path)}' -Stream com.dropbox.ignored -Value 1`;
       const response = await execPowerShellCommand(cmd);
       const isSuccessful = response === '';
-      return isSuccessful ? `${Chalk.green('Successful')}` : response;
+      const successMessage = `${Chalk.green(`Successfully added the ignore attribute to "${path}"`)}`;
+      return isSuccessful ? successMessage : response;
     }
 
     if (isMacOS) {
