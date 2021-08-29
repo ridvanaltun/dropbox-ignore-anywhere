@@ -1,3 +1,12 @@
+## [1.0.4](https://github.com/ridvanaltun/dropbox-ignore-anywhere/compare/v1.0.3...v1.0.4) (2021-08-29)
+
+
+### Bug Fixes
+
+* macos and linux problem ([ee95bb2](https://github.com/ridvanaltun/dropbox-ignore-anywhere/commit/ee95bb23c1c72b0d82f0a3a19eea5a087903ed87))
+* **windows:** absolute path ([cc4c5e9](https://github.com/ridvanaltun/dropbox-ignore-anywhere/commit/cc4c5e916c1f654966c09fd0d93b1cb418efcc12))
+* **windows:** better success message ([0ba214c](https://github.com/ridvanaltun/dropbox-ignore-anywhere/commit/0ba214c184d7bd0759ee9473ca6a8152cc43c1e6))
+
 ## [1.0.3](https://github.com/ridvanaltun/dropbox-ignore-anywhere/compare/v1.0.2...v1.0.3) (2021-08-28)
 
 
