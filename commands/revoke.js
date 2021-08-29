@@ -11,23 +11,32 @@ const revoke = async (path) => {
       const cmd = `Clear-Content -Path '${absPath(path)}' -Stream com.dropbox.ignored`;
       const response = await execPowerShellCommand(cmd);
       const isSuccessful = response === '';
-      const successMessage = `${Chalk.green(`Successfully revoked the ignored attribute "${path}"`)}`;
-      return isSuccessful ? successMessage : response;
+      const successMessage = Chalk.green(`Successfully revoked the ignored attribute "${path}"`);
+      const errorMessage = Chalk.red(response);
+      return isSuccessful ? successMessage : errorMessage;
     }
 
     if (isMacOS) {
       const execShellCommand = require('../lib/execShellCommand');
-      const cmd = `xattr -d com.dropbox.ignored ${path.replace(' ', '\\ ')}`;
-      return await execShellCommand(cmd);
+      const cmd = `xattr -d com.dropbox.ignored ${absPath(path)}`;
+      const response = await execShellCommand(cmd);
+      const isSuccessful = response.stderr === '';
+      const successMessage = Chalk.green(`Successfully revoked the ignored attribute "${path}"`);
+      const errorMessage = Chalk.red(response.stderr);
+      return isSuccessful ? successMessage : errorMessage;
     }
 
     if (isLinux) {
       const execShellCommand = require('../lib/execPowerShellCommand');
-      const cmd = `attr -r com.dropbox.ignored ${path}`;
-      return await execShellCommand(cmd);
+      const cmd = `attr -r com.dropbox.ignored ${absPath(path)}`;
+      const response = await execShellCommand(cmd);
+      const isSuccessful = response.stderr === '';
+      const successMessage = Chalk.green(`Successfully revoked the ignored attribute "${path}"`);
+      const errorMessage = Chalk.red(response.stderr);
+      return isSuccessful ? successMessage : errorMessage;
     }
   } catch (error) {
-    return `${Chalk.red(error.message)}`;
+    return Chalk.red(error.message);
   }
 };
 
