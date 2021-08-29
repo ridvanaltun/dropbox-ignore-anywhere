@@ -32,6 +32,7 @@
     "chalk": "^4.1.2",
     "commander": "^8.1.0",
     "node-powershell": "^4.0.0",
+    "path": "^0.12.7",
     "update-notifier": "^5.1.0"
   },
   "devDependencies": {

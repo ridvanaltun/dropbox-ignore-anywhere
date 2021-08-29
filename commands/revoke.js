@@ -1,5 +1,6 @@
 const Chalk = require('chalk');
 const {computed} = require('../consts');
+const {absPath} = require('../lib');
 
 const {isWindows, isMacOS, isLinux} = computed;
 
@@ -8,9 +9,10 @@ const revoke = async (path) => {
     if (isWindows) {
       const execPowerShellCommand = require('../lib/execPowerShellCommand');
       const cmd =
-        'Clear-Content -Path ' + path + ' -Stream com.dropbox.ignored';
+        'Clear-Content -Path ' + '"' + absPath(path) + '"' + ' -Stream com.dropbox.ignored';
       const response = await execPowerShellCommand(cmd);
-      return response === '' ? `${Chalk.green('Successful')}` : response;
+      const isSuccessful = response === '';
+      return isSuccessful ? `${Chalk.green('Successful')}` : response;
     }
 
     if (isMacOS) {
