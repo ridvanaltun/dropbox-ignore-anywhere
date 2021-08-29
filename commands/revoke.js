@@ -1,6 +1,6 @@
 const Chalk = require('chalk');
 const {computed} = require('../consts');
-const {absPath} = require('../lib');
+const absPath = require('../lib/absPath');
 
 const {isWindows, isMacOS, isLinux} = computed;
 
