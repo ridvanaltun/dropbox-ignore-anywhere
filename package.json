@@ -46,7 +46,7 @@
     "eslint-config-google": "^0.14.0",
     "husky": "^7.0.2",
     "lint-staged": "^11.1.2",
-    "semantic-release": "^17.4.7"
+    "semantic-release": "^19.0.3"
   },
   "lint-staged": {
     "*.js": [
